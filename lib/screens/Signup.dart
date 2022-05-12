@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:social/controller/theme_controller.dart';
 
 class Signup extends GetWidget {
   const Signup({Key? key}) : super(key: key);
@@ -149,7 +150,9 @@ class Signup extends GetWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            ThemeController().changeThemeData("dark");
+                          },
                           child: const Text(
                             "Signin",
                             style: TextStyle(
